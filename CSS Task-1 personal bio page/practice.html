@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Guess the number</h2>
+    <input type="text" id="num1" />
+    <button onclick="clac()">check</button>
+    <p id="mess"></p>
+    <p id="wl">You are score is 10</p>
+    <script>
+      var num = document.getElementById("num1");
+
+      var display = document.getElementById("mess");
+      var winloss = document.getElementById("wl");
+      var score = 10;
+      var a = Math.random();
+      var num2 = Math.floor(a * 10) + 1;
+      function clac() {
+        var numv = Number(num.value);
+
+        if (score == 1) {
+          display.textContent = "Your score is 0";
+          winloss.textContent = "you lost the match";
+        } else if (numv == num2) {
+          display.textContent = "Your score is " + score;
+          winloss.textContent = "you won the match";
+          score = 10;
+        } else if (numv != num2) {
+          score--;
+          display.textContent = "Your score is " + score;
+          winloss.textContent = "you are wrong";
+        }
+      }
+    </script>
+  </body>
+</html>

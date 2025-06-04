@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  border: 3px solid black;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "head nav nav main"
+    "head aside1 aside2 aside3"
+    "head aside4 footer aside3";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  grid-template-rows: 100px 150px 150px;
+}
+
+header,
+nav,
+aside,
+main,
+footer {
+  padding: 20px;
+}
+header {
+  background-color: blue;
+
+  grid-area: head;
+}
+nav {
+  grid-area: nav;
+  background-color: violet;
+}
+main {
+  grid-area: main;
+  background-color: aqua;
+}
+.aside1 {
+  grid-area: aside1;
+  background-color: orange;
+}
+.aside2 {
+  grid-area: aside2;
+
+  background-color: greenyellow;
+}
+.aside3 {
+  grid-area: aside3;
+  background-color: blueviolet;
+}
+.aside4 {
+  grid-area: aside4;
+  background-color: blueviolet;
+}
+
+footer {
+  grid-area: footer;
+  background-color: red;
+}
