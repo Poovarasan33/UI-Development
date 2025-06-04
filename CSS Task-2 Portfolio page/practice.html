@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poovarasan Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.6;
+        background-color: #f4f7f9;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: #004080;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #0a2647;
+        color: white;
+        padding: 20px 10%;
+        flex-wrap: wrap;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: white;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #dbe9f4;
+      }
+
+      .hero img {
+        width: 150px;
+        border-radius: 50%;
+        margin-top: 15px;
+      }
+
+      section {
+        padding: 40px 10%;
+      }
+
+      section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .skills-grid,
+      .project-grid,
+      .certs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+      }
+
+      .skill-card,
+      .project-card,
+      .cert-card {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #ccc;
+      }
+
+      .project-card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .project-card h3 {
+        color: #004080;
+      }
+
+      .certs ul {
+        list-style: disc;
+        padding-left: 20px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .about-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .about,
+      .contact {
+        flex: 1 1 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #0a2647;
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      footer a {
+        color: #ffcc00;
+      }
+
+      @media (max-width: 600px) {
+        .hero h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Poovarasan</h1>
+      <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Hi, I'm Poovarasan</h2>
+      <p>Java & UI Developer | Creating modern, responsive web apps</p>
+      <img src="./images/poovarasan.jpg" alt="Poovarasan" />
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React JS</div>
+        <div class="skill-card">SQL</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Bug Tracker" />
+          <h3>Bug Tracking System</h3>
+          <p>JSP, Servlets, JDBC-based bug reporting & management system.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Library App" />
+          <h3>Library Management</h3>
+          <p>Cloud-based system for book and member management.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x150" alt="Cyber Security" />
+          <h3>Eavesdropping Detection</h3>
+          <p>Detects router-level eavesdropping attacks using Java & MVA.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="certs">
+      <h2>Certificates & Activities</h2>
+      <ul>
+        <li>Responsive Web Design - freeCodeCamp (2022)</li>
+        <li>Cyber Security Essentials - Cisco (2021)</li>
+        <li>Front-end HTML & CSS - Great Learning (2023)</li>
+        <li>Java (Basic) - HackerRank (2023)</li>
+        <li>Salesforce Developer Internship - Nov 2023 to Jan 2024</li>
+        <li>Micro-Certification: Welcome to ServiceNow (Aug 2023)</li>
+        <li>
+          Internship: Java Programming at InternSavy (Dec 2023 - Jan 2024)
+        </li>
+        <li>Campus Incubation Program - KANINI Software (2022-2023)</li>
+        <li>
+          Presented paper on "Online Handyman Service" – Al-Ameen College (2023)
+        </li>
+      </ul>
+
+      <h2>Leadership & Extra Activities</h2>
+      <ul>
+        <li>Captain - School Basketball Team (2018–2020)</li>
+        <li>NSS Coordinator - KSR College (2020–2024)</li>
+      </ul>
+    </section>
+
+    <section id="about-contact" class="about-contact">
+      <div class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+          B.Tech IT graduate from KSR College of Engineering. Passionate about
+          full-stack development, UI design, and secure web systems. Curious,
+          adaptive, and self-disciplined.
+        </p>
+      </div>
+      <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          Email:
+          <a href="mailto:ceit36poovarasan24@gmail.com"
+            >ceit36poovarasan24@gmail.com</a
+          >
+        </p>
+        <p>Location: Tiruchengode, Namakkal</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Poovarasan33" target="_blank"
+            >Poovarasan33</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://linkedin.com/in/poovarasan-g-a8b525219"
+            target="_blank"
+            >Poovarasan G</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Poovarasan G | Designed with ❤️ using HTML, Flexbox & Grid
+      </p>
+    </footer>
+  </body>
+</html>
