@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+    .box {
+      text-align: center;
+      border: 1px solid black;
+      width: 500px;
+    }
+    li {
+      background: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h1>TO-DO-MYLIST</h1>
+      <input id="input" type="text" /> <br />
+      <button onclick="add()">add</button>
+
+      <ul id="element"></ul>
+    </div>
+    <script>
+      var input = document.getElementById("input");
+
+      var pr = document.getElementById("not");
+      var element = document.getElementById("element");
+      function add() {
+        var taskText = input.value;
+        if (taskText == "") {
+          alert("Please enter a task!");
+          return;
+        }
+        var li = document.createElement("li");
+        li.innerHTML =
+          input.value +
+          "&NonBreakingSpace; &NonBreakingSpace; <button onclick='deleteitem(event)'> delete</button>";
+        element.append(li);
+      }
+
+      function deleteitem(event) {
+        event.target.parentElement.remove();
+      }
+    </script>
+  </body>
+</html>
