@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const mypromise = new Promise((resolve, reject) => {
+        const a = false;
+
+        setTimeout(() => {
+          if (a) {
+            resolve("My mother bought me phone");
+            console.log("I need a mobile");
+          } else {
+            reject("No phone");
+          }
+        }, 3000);
+      });
+
+      mypromise
+        .then((msg) => {
+          console.log(msg);
+        })
+
+        .catch((msg) => {
+          console.log(msg);
+        });
+    </script>
+  </body>
+</html>
