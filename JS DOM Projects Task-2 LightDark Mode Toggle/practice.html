@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toggle Multiple Classes</title>
+    <style>
+      .card {
+        width: 200px;
+        height: 100px;
+        background-color: lightgray;
+        margin: 20px;
+        text-align: center;
+        line-height: 100px;
+        transition: all 0.3s ease;
+      }
+
+      .active {
+        background-color: lightgreen;
+      }
+
+      .shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .highlight {
+        border: 2px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card active shadow" id="myCard">Click Me</div>
+
+    <script>
+      const card = document.getElementById("myCard");
+
+      card.addEventListener("click", () => {
+        // Toggle multiple classes
+        card.classList.toggle("active");
+        card.classList.toggle("shadow");
+        card.classList.toggle("highlight");
+      });
+    </script>
+  </body>
+</html>
